@@ -34,6 +34,8 @@ export const translateText = async (
       config: {
         temperature: 0.1, // Low temperature for consistent translation
         maxOutputTokens: 1000,
+        // When setting maxOutputTokens, you must also set thinkingConfig.thinkingBudget (e.g., 500 budget for 1000 total tokens)
+        thinkingConfig: { thinkingBudget: 500 },
       }
     });
 

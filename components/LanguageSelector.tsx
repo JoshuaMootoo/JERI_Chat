@@ -15,10 +15,10 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ value, onChange, cl
       name={name}
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      className={`block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none transition-all ${className}`}
+      className={`block w-full px-4 py-3 text-indigo-950 font-black bg-white border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500 focus:outline-none transition-all cursor-pointer ${className}`}
     >
       {SUPPORTED_LANGUAGES.map((lang) => (
-        <option key={lang.code} value={lang.code}>
+        <option key={lang.code} value={lang.code} className="text-indigo-950 font-bold">
           {lang.name} ({lang.nativeName})
         </option>
       ))}
